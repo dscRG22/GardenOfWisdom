@@ -69,7 +69,7 @@
       flex-direction: column;
       gap: 10px;
     }
-    input, textarea {
+    input, textarea, select {
       padding: 10px;
       border: 1px solid #ccc;
       border-radius: 5px;
@@ -108,6 +108,8 @@
     <a href="#roadmap">Roadmap</a>
     <a href="#references">References</a>
     <a href="#political-structure">Political Structure</a>
+    <a href="#survey">Survey</a>
+    <a href="#design-competition">Design Competition</a>
     <a href="#gallery">Gallery</a>
     <a href="#contact">Contact</a>
   </nav>
@@ -558,6 +560,35 @@
       <li><strong>Role</strong>: Implements laws and action plans approved through the legislative process, ensuring execution aligns with the vision’s goals of harmony and stewardship.</li>
     </ul>
   </div>
+  <div class="content" id="survey">
+    <h2>Survey</h2>
+    <p>We value your feedback on the Garden of Wisdom vision. Please rate your willingness on a scale of 1-10 (1 being not at all, 10 being very willing) and provide constructive feedback.</p>
+    <form id="surveyForm">
+      <label for="contribute_money">Willingness to contribute money:</label>
+      <input type="number" id="contribute_money" name="contribute_money" min="1" max="10" required>
+      
+      <label for="partake_actively">Willingness to partake actively:</label>
+      <input type="number" id="partake_actively" name="partake_actively" min="1" max="10" required>
+      
+      <label for="passively_support">Willingness to passively support:</label>
+      <input type="number" id="passively_support" name="passively_support" min="1" max="10" required>
+      
+      <label for="overall_appreciation">Overall appreciation of this vision:</label>
+      <input type="number" id="overall_appreciation" name="overall_appreciation" min="1" max="10" required>
+      
+      <label for="feedback">Constructive feedback:</label>
+      <textarea id="feedback" name="feedback" rows="4" placeholder="Your thoughts and suggestions..." required></textarea>
+      
+      <button type="submit">Submit Survey</button>
+    </form>
+    <p id="surveyMessage"></p>
+  </div>
+  <div class="content" id="design-competition">
+    <h2>Design Competition</h2>
+    <p>We invite artists, architects, designers, or passionate individuals to submit concept designs for the Garden of Wisdom community. Share your vision of permaculture-style villages, central learning spaces, AI-assisted hubs, and more!</p>
+    <p>To submit, please use the <a href="#contact">Contact</a> page to send your name, email, and a description or link to your concept art. We encourage creative interpretations that align with our principles of wisdom, sustainability, and collective harmony.</p>
+    <p>Submissions are open until further notice. Selected concepts may be featured in our gallery or incorporated into future planning.</p>
+  </div>
   <div class="content" id="gallery">
     <h2>Gallery</h2>
     <div class="gallery">
@@ -577,15 +608,19 @@
     <p id="formMessage"></p>
   </div>
   <footer>
-    <p>&copy; 2025 Garden of Wisdom | Tweet to @elonmusk @xAI: https://t.co/example</p>
+    <p>&copy; 2025 Garden of Wisdom</p>
   </footer>
   <script>
     document.getElementById('contactForm').addEventListener('submit', function(e) {
       e.preventDefault();
       const name = e.target.querySelector('input[type="text"]').value;
-      const email = e.target.querySelector('input[type="email"]').value;
-      const message = e.target.querySelector('textarea').value;
       document.getElementById('formMessage').textContent = `Thank you, ${name}! Your message has been received.`;
+      e.target.reset();
+    });
+    
+    document.getElementById('surveyForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      document.getElementById('surveyMessage').textContent = `Thank you for your feedback! Your survey has been submitted.`;
       e.target.reset();
     });
   </script>
