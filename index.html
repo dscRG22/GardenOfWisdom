@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Garden of Wisdom | Latest</title>
   <link href="https://fonts.googleapis.com/css2?family=Lato&family=Staatliches&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
   <style>
+    /* Modern Day Eden CSS for Home Page, Header, and Navbar */
     :root {
       --primary-color: rgba(38, 89, 199, 0.925);
       --secondary-color: gray;
@@ -155,30 +155,6 @@
       font-size: 3rem;
     }
 
-    #article .meta {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: #eee;
-      padding: 0.5rem;
-    }
-
-    #article .meta .category {
-      margin-top: 0.4rem;
-    }
-
-    /* Inner Page Grid Container, About Page */
-    .page-container {
-      display: grid;
-      grid-template-columns: 5fr 2fr;
-      margin: 2rem 0;
-      grid-gap: 1rem;
-    }
-
-    .page-container > *:first-child {
-      grid-row: 1 / span 3;
-    }
-
     /* Navigation */
     #main-nav {
       background: #fff;
@@ -189,7 +165,7 @@
 
     #main-nav .container {
       display: grid;
-      grid-template-columns: 6fr 4fr 0fr;
+      grid-template-columns: 6fr 4fr;
       padding: 1rem;
       align-items: center;
     }
@@ -217,15 +193,6 @@
     #main-nav ul li a:hover {
       background: var(--light-color);
       color: var(--dark-color);
-    }
-
-    #main-nav .social {
-      justify-self: center;
-    }
-
-    #main-nav .social i {
-      color: #777;
-      margin-right: .5rem;
     }
 
     /* Showcase */
@@ -304,6 +271,7 @@
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       grid-gap: 1.5rem;
+      padding-top: 15px; /* Added 15px top padding */
     }
 
     #main-footer .footer-container > *:last-child {
@@ -324,8 +292,9 @@
       width: 90%;
     }
 
-    /* Non-Home Page Styles (from previous artifact) */
+    /* Original CSS for Non-Home Pages */
     .non-home-content {
+      font-family: Arial, sans-serif;
       max-width: 800px;
       margin: 20px auto;
       padding: 20px;
@@ -333,6 +302,8 @@
       border-radius: 5px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
       display: none;
+      color: #333;
+      line-height: 1.6;
     }
 
     .non-home-content:target {
@@ -406,15 +377,9 @@
   </style>
 </head>
 <body>
-    <nav id="main-nav">
+  <nav id="main-nav">
     <div class="container">
-      <img src="https://via.placeholder.com/180x60?text=Logo" alt="Garden of Wisdom" class="logo">
-      <div class="social">
-        <a href="http://facebook.com" target="_blank"><i class="fab fa-facebook fa-2x"></i></a>
-        <a href="http://twitter.com" target="_blank"><i class="fab fa-twitter fa-2x"></i></a>
-        <a href="http://instagram.com" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
-        <a href="http://youtube.com" target="_blank"><i class="fab fa-youtube fa-2x"></i></a>
-      </div>
+      <img src="https://via.placeholder.com/150x50?text=Logo" alt="Garden of Wisdom" class="logo">
       <ul>
         <li><a class="current" href="#home">Home</a></li>
         <li><a href="#vision">Vision</a></li>
@@ -428,41 +393,19 @@
       </ul>
     </div>
   </nav>
-  <div id="showcase">
-    <div class="container">
-      <div class="showcase-container">
-        <div class="showcase-content">
-          <div class="category category-entertainment">Utopia</div>
-          <h1>Garden of Wisdom</h1>
-          <p>Hello and welcome to Garden of Wisdom where we explore, inspire, and share ways we presently, historically, and in the future could re-create the eutopia known as the Garden of Eden. We believe the social and climate crisis' of our time can be solved with a return to what we once held dear...a spiritual connection to the earth, its creatures, and with one another.</p>
-          <a href="#vision" class="btn btn-primary">Read More</a>
+  <div id="home">
+    <div id="showcase">
+      <div class="container">
+        <div class="showcase-container">
+          <div class="showcase-content">
+            <div class="category category-entertainment">Utopia</div>
+            <h1>Garden of Wisdom</h1>
+            <p>Our vision is to build communities where wisdom, ethical action, and service guide daily life. By embodying Christ’s teachings collectively, we aim to restore social and spiritual harmony, turning knowledge into practical wisdom that benefits all. The Garden of Wisdom seeks to renew humanity through sustainable, wisdom-centered societies, starting with permaculture villages on Earth and expanding to Mars and beyond. Guided by ethical AI, Socratic education, and a commitment to stewardship, we envision a galactic network of interconnected communities that transcend conflict and foster collective flourishing. Join us in rebuilding Eden, where humanity aligns with divine order, living as the Body of Christ through love, justice, and shared purpose.</p>
+            <a href="#vision" class="btn btn-primary">Read More</a>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <!-- <nav id="main-nav">
-    <div class="container">
-      <img src="https://via.placeholder.com/180x60?text=Logo" alt="Garden of Wisdom" class="logo">
-      <div class="social">
-        <a href="http://facebook.com" target="_blank"><i class="fab fa-facebook fa-2x"></i></a>
-        <a href="http://twitter.com" target="_blank"><i class="fab fa-twitter fa-2x"></i></a>
-        <a href="http://instagram.com" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
-        <a href="http://youtube.com" target="_blank"><i class="fab fa-youtube fa-2x"></i></a>
-      </div>
-      <ul>
-        <li><a class="current" href="#home">Home</a></li>
-        <li><a href="#vision">Vision</a></li>
-        <li><a href="#manifesto">Manifesto</a></li>
-        <li><a href="#political-structure">Political Structure</a></li>
-        <li><a href="#roadmap">Roadmap</a></li>
-        <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#design-competition">Design Competition</a></li>
-        <li><a href="#survey">Survey</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </div>
-  </nav> -->
-  <div id="home">
     <section id="home-articles" class="py-2">
       <div class="container">
         <h2>Editor Picks</h2>
