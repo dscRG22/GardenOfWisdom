@@ -6,7 +6,7 @@
   <title>Garden of Wisdom | Latest</title>
   <link href="https://fonts.googleapis.com/css2?family=Lato&family=Staatliches&display=swap" rel="stylesheet">
   <style>
-    /* Modern Day Eden CSS for Home Page, Header, and Navbar */
+    /* Modern Day Eden CSS for Home Page, Navbar, and Footer */
     :root {
       --primary-color: rgba(38, 89, 199, 0.925);
       --secondary-color: gray;
@@ -271,7 +271,7 @@
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       grid-gap: 1.5rem;
-      padding-top: 15px; /* Added 15px top padding */
+      padding-top: 15px;
     }
 
     #main-footer .footer-container > *:last-child {
@@ -292,8 +292,8 @@
       width: 90%;
     }
 
-    /* Original CSS for Non-Home Pages */
-    .non-home-content {
+    /* Original CSS for Non-Home Pages (from indexoriginal.html) */
+    .content {
       font-family: Arial, sans-serif;
       max-width: 800px;
       margin: 20px auto;
@@ -306,11 +306,11 @@
       line-height: 1.6;
     }
 
-    .non-home-content:target {
+    .content:target {
       display: block;
     }
 
-    .non-home-content .gallery {
+    .content .gallery {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
@@ -318,7 +318,7 @@
       margin: 20px 0;
     }
 
-    .non-home-content .gallery img {
+    .content .gallery img {
       width: 300px;
       height: 200px;
       object-fit: cover;
@@ -326,21 +326,21 @@
       border-radius: 5px;
     }
 
-    .non-home-content form {
+    .content form {
       display: flex;
       flex-direction: column;
       gap: 10px;
     }
 
-    .non-home-content input,
-    .non-home-content textarea,
-    .non-home-content select {
+    .content input,
+    .content textarea,
+    .content select {
       padding: 10px;
       border: 1px solid #ccc;
       border-radius: 5px;
     }
 
-    .non-home-content button {
+    .content button {
       padding: 10px;
       background-color: #333;
       color: white;
@@ -349,11 +349,11 @@
       cursor: pointer;
     }
 
-    .non-home-content button:hover {
+    .content button:hover {
       background-color: #555;
     }
 
-    .non-home-content .radio-group {
+    .content .radio-group {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
@@ -361,11 +361,11 @@
       margin-bottom: 15px;
     }
 
-    .non-home-content .radio-group label {
+    .content .radio-group label {
       margin-right: 10px;
     }
 
-    .non-home-content .radio-labels {
+    .content .radio-labels {
       display: flex;
       justify-content: space-between;
       width: 100%;
@@ -388,6 +388,7 @@
         <li><a href="#roadmap">Roadmap</a></li>
         <li><a href="#gallery">Gallery</a></li>
         <li><a href="#design-competition">Design Competition</a></li>
+        <li><a href="#references">References</a></li>
         <li><a href="#survey">Survey</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -408,40 +409,40 @@
     </div>
     <section id="home-articles" class="py-2">
       <div class="container">
-        <h2>Editor Picks</h2>
+        <h2>The Vision</h2>
         <div class="articles-container">
           <article class="card">
-            <img src="https://via.placeholder.com/300x200?text=Art+Image" alt="Famous Art Eden">
+            <img src="https://via.placeholder.com/300x200?text=Vision+Image" alt="Vision">
             <div>
-              <div class="category category-entertainment">Art</div>
-              <h3><a href="#gallery">Famous Art Eden</a></h3>
+              <div class="category category-entertainment">Vision</div>
+              <h3><a href="#vision">Vision</a></h3>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, voluptate id. Veniam fugit eligendi ipsum animi porro hic ea maiores?</p>
             </div>
           </article>
           <article class="card bg-dark">
-            <div class="category category-technology">Technology</div>
-            <h3><a href="#roadmap">How to Power Eden</a></h3>
+            <div class="category category-technology">Manifesto</div>
+            <h3><a href="#manifesto">Manifesto</a></h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro hic ea maiores?</p>
           </article>
           <article class="card">
-            <img src="https://via.placeholder.com/300x200?text=Religion+Image" alt="Where the Idea of Eden Originated">
+            <img src="https://via.placeholder.com/300x200?text=Political+Structure+Image" alt="Political Structure">
             <div>
-              <div class="category category-sports">Religion</div>
-              <h3><a href="#vision">Where the Idea of Eden Originated</a></h3>
+              <div class="category category-sports">Political Structure</div>
+              <h3><a href="#political-structure">Political Structure</a></h3>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, voluptate id. Veniam fugit eligendi ipsum animi porro hic ea maiores?</p>
             </div>
           </article>
           <article class="card">
-            <div class="category category-entertainment">Culture</div>
-            <h3><a href="#manifesto">What is Permaculture?</a></h3>
+            <div class="category category-entertainment">Roadmap</div>
+            <h3><a href="#roadmap">Roadmap</a></h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, voluptate id. Veniam fugit eligendi ipsum animi porro hic ea maiores?</p>
-            <img src="https://via.placeholder.com/300x200?text=Culture+Image" alt="What is Permaculture?">
+            <img src="https://via.placeholder.com/300x200?text=Roadmap+Image" alt="Roadmap">
           </article>
         </div>
       </div>
     </section>
   </div>
-  <div class="non-home-content" id="vision">
+  <div class="content" id="vision">
     <h2>Vision Statement</h2>
     <h3>The Restoration of the Body of Christ and the Garden of Wisdom</h3>
     <h4>Premise</h4>
@@ -486,7 +487,7 @@
     </ul>
     <p>This is humanity’s greatest opportunity: to transcend conflict, expand consciousness, and engage responsibly with the universe. To be fruitful, multiply in wisdom, and deepen understanding of God through lived experience. The time for passive study and ritual is over. We are called to act fully in faith, wisdom, and conviction — to restore Eden, embody Christ, and live in alignment with the divine design.</p>
   </div>
-  <div class="non-home-content" id="manifesto">
+  <div class="content" id="manifesto">
     <h2>Manifesto</h2>
     <h3>The Restoration of the Body of Christ and the Garden of Wisdom</h3>
     <h4>Premise</h4>
@@ -603,7 +604,7 @@
     </ul>
     <p>Humanity has spent millennia preparing for this moment — studying, reflecting, and refining wisdom. The time for passive contemplation is over. It is now the era of faith in action, of building, learning, and embodying the archetype of Christ to restore Eden and cultivate a sustainable, wise, and flourishing civilization.</p>
   </div>
-  <div class="non-home-content" id="political-structure">
+  <div class="content" id="political-structure">
     <h2>Political Structure</h2>
     <h3>1. Overview</h3>
     <ul>
@@ -651,7 +652,7 @@
       <li><strong>Role</strong>: Implements laws and action plans approved through the legislative process, ensuring execution aligns with the vision’s goals of harmony and stewardship.</li>
     </ul>
   </div>
-  <div class="non-home-content" id="roadmap">
+  <div class="content" id="roadmap">
     <h2>Conceptual Map: Garden of Wisdom Society</h2>
     <h3>1. Central Village (Edenic Core)</h3>
     <h4>Round Central Building</h4>
@@ -735,20 +736,169 @@
       <li>Highlight “flow arrows” showing movement of knowledge, wisdom, and resources.</li>
     </ol>
   </div>
-  <div class="non-home-content" id="gallery">
+  <div class="content" id="gallery">
     <h2>Gallery</h2>
     <div class="gallery">
       <img src="https://via.placeholder.com/300x200?text=Aerial+View" alt="Aerial View of Garden of Wisdom">
       <img src="https://via.placeholder.com/300x200?text=Ground+Level+View" alt="Ground Level View of Garden of Wisdom">
     </div>
   </div>
-  <div class="non-home-content" id="design-competition">
+  <div class="content" id="design-competition">
     <h2>Design Competition</h2>
     <p>We invite artists, architects, designers, or passionate individuals to submit concept designs for the Garden of Wisdom community. Share your vision of permaculture-style villages, central learning spaces, AI-assisted hubs, and more!</p>
     <p>To submit, please use the <a href="#contact">Contact</a> page to send your name, email, and a description or link to your concept art. We encourage creative interpretations that align with our principles of wisdom, sustainability, and collective harmony.</p>
     <p>Submissions are open until further notice. Selected concepts may be featured in our gallery or incorporated into future planning.</p>
   </div>
-  <div class="non-home-content" id="survey">
+  <div class="content" id="references">
+    <h2>References</h2>
+    <h3>Scriptural References Supporting the Restoration of the Body of Christ</h3>
+    <p>The Garden of Wisdom vision emphasizes the Body of Christ as a collective, living embodiment of divine archetypes, awakening humanity to unity and action. The following scriptures align with this vision, portraying the Body as interconnected members working together for a greater whole.</p>
+    <ul>
+      <li><strong>1 Corinthians 12:12-13 (ESV)</strong>: "For just as the body is one and has many members, and all the members of the body, though many, are one body, so it is with Christ. For in one Spirit we were all baptized into one body—Jews or Greeks, slaves or free—and all were made to drink of one Spirit." <em>This reflects the collective awakening of humanity as the Body, transcending individual egos for unified harmony.</em></li>
+      <li><strong>1 Corinthians 12:27 (ESV)</strong>: "Now you are the body of Christ and individually members of it." <em>This supports the idea of humanity becoming the living manifestation of Christ collectively, as outlined in our principles.</em></li>
+      <li><strong>Ephesians 4:15-16 (ESV)</strong>: "Rather, speaking the truth in love, we are to grow up in every way into him who is the head, into Christ, from whom the whole body, joined and held together by every joint with which it is equipped, when each part is working properly, makes the body grow so that it builds itself up in love." <em>This ties to the growth and stewardship within communities, building toward Edenic restoration.</em></li>
+    </ul>
+    <h3>Scriptures on Wisdom over Knowledge</h3>
+    <p>A core premise is prioritizing wisdom—action-oriented discernment—over mere doctrinal knowledge. These verses distinguish wisdom as life-preserving and rooted in reverence, aligning with the call to transcend dogma for collective maturity.</p>
+    <ul>
+      <li><strong>Proverbs 1:7 (ESV)</strong>: "The fear of the Lord is the beginning of knowledge; fools despise wisdom and instruction." <em>This highlights wisdom's foundational role, beyond knowledge, in guiding ethical living and reflection.</em></li>
+      <li><strong>Ecclesiastes 7:12 (ESV)</strong>: "For the protection of wisdom is like the protection of money, and the advantage of knowledge is that wisdom preserves the life of him who has it." <em>This underscores wisdom's practical superiority, preserving and flourishing communities as in the Garden model.</em></li>
+      <li><strong>Proverbs 9:10 (ESV)</strong>: "The fear of the Lord is the beginning of wisdom, and the knowledge of the Holy One is understanding." <em>This connects knowledge as a tool leading to wisdom, mirroring the view that doctrines serve psychological and spiritual development.</em></li>
+    </ul>
+    <h3>Scriptures on the Restoration of Eden and Creation</h3>
+    <p>The vision reimagines Eden as a living, sustainable society through stewardship and harmony. These verses speak to God's promise of renewal, where creation is regenerated, echoing the permaculture villages and ecological principles.</p>
+    <ul>
+      <li><strong>Isaiah 65:17 (ESV)</strong>: "For behold, I create new heavens and a new earth, and the former things shall not be remembered or come into mind." <em>This evokes the transcendent restoration of Eden as a new, living reality beyond the past.</em></li>
+      <li><strong>Revelation 22:1-2 (ESV)</strong>: "Then the angel showed me the river of the water of life, bright as crystal, flowing from the throne of God and of the Lamb through the middle of the street of the city; also, on either side of the river, the tree of life with its twelve kinds of fruit, yielding its fruit each month. The leaves of the tree were for the healing of the nations." <em>This symbolizes the restored Garden with life-giving elements, akin to the central Tree of Wisdom and healing communities.</em></li>
+      <li><strong>Ezekiel 36:35 (ESV)</strong>: "And they will say, ‘This land that was desolate has become like the garden of Eden, and the waste and desolate and ruined cities are now fortified and inhabited.’" <em>This directly ties to rebuilding Eden through action and stewardship.</em></li>
+    </ul>
+    <h3>Scriptures on God: The Beyond</h3>
+    <p>God as the transcendent infinite inspires humility and curiosity. These verses affirm God's exalted nature, calling humanity to align with a greater order.</p>
+    <ul>
+      <li><strong>Psalm 113:4-5 (ESV)</strong>: "The Lord is high above all nations, and his glory above the heavens! Who is like the Lord our God, who is seated on high." <em>This captures God's transcendence, humbling the self and fostering awe.</em></li>
+      <li><strong>Isaiah 40:22 (ESV)</strong>: "It is he who sits above the circle of the earth, and its inhabitants are like grasshoppers; who stretches out the heavens like a curtain, and spreads them like a tent to dwell in." <em>This illustrates the grand design beyond personal desire, aligning with stewardship.</em></li>
+      <li><strong>Hebrews 1:3 (ESV)</strong>: "He is the radiance of the glory of God and the exact imprint of his nature, and he upholds the universe by the word of his power." <em>This links transcendence to the sustaining order of creation.</em></li>
+    </ul>
+    <h3>Scriptures on Christ: The Human Path</h3>
+    <p>Christ models humility, love, and service, with humanity called to embody him collectively. These verses encourage imitation, supporting the call to become Christ in action.</p>
+    <ul>
+      <li><strong>Ephesians 5:1-2 (ESV)</strong>: "Therefore be imitators of God, as beloved children. And walk in love, as Christ loved us and gave himself up for us, a fragrant offering and sacrifice to God." <em>This urges selfless action and harmony with divine will.</em></li>
+      <li><strong>1 Corinthians 11:1 (ESV)</strong>: "Be imitators of me, as I am of Christ." <em>This promotes collective embodiment through mentorship and example.</em></li>
+      <li><strong>Philippians 2:5 (ESV)</strong>: "Have this mind among yourselves, which is yours in Christ Jesus." <em>This ties to self-emptying and relational ethics in community.</em></li>
+    </ul>
+    <h3>Scriptures on the Spirit: The Inner Guide</h3>
+    <p>The Spirit connects individuals to the divine and collective, guiding discernment. These align with the view of intuition and alignment for flourishing.</p>
+    <ul>
+      <li><strong>John 14:26 (ESV)</strong>: "But the Helper, the Holy Spirit, whom the Father will send in my name, he will teach you all things and bring to your remembrance all that I have said to you." <em>This portrays the Spirit as teacher and inner guide.</em></li>
+      <li><strong>Isaiah 11:2 (ESV)</strong>: "And the Spirit of the Lord shall rest upon him, the Spirit of wisdom and understanding, the Spirit of counsel and might, the Spirit of knowledge and the fear of the Lord." <em>This links the Spirit to wisdom and ethical action.</em></li>
+      <li><strong>John 16:13 (ESV)</strong>: "When the Spirit of truth comes, he will guide you into all the truth, for he will not speak on his own authority, but whatever he hears he will speak, and he will declare to you the things that are to come." <em>This emphasizes discernment from selfish desire.</em></li>
+    </ul>
+    <h3>Scriptures on Community Stewardship and Action over Ritual</h3>
+    <p>The vision shifts from passive ritual to active service, justice, and stewardship. These verses prioritize ethical living, communal support, and responsible care for creation.</p>
+    <ul>
+      <li><strong>Genesis 2:15 (ESV)</strong>: "The Lord God took the man and put him in the garden of Eden to work it and keep it." <em>This foundational call to stewardship mirrors the Edenic villages and ecological harmony.</em></li>
+      <li><strong>Galatians 6:2 (ESV)</strong>: "Bear one another's burdens, and so fulfill the law of Christ." <em>This promotes collective action and support in communities.</em></li>
+      <li><strong>Colossians 3:23-24 (ESV)</strong>: "Whatever you do, work heartily, as for the Lord and not for men, knowing that from the Lord you will receive the inheritance as your reward. You are serving the Lord Christ." <em>This elevates action and service over mere ritual.</em></li>
+      <li><strong>1 Peter 4:10 (ESV)</strong>: "As each has received a gift, use it to serve one another, as good stewards of God's varied grace." <em>This ties gifts to communal flourishing and ethical governance.</em></li>
+    </ul>
+    <h3>Non-Scriptural References Supporting the Vision</h3>
+    <h4>1. Philosophical and Ethical Foundations</h4>
+    <p>The vision prioritizes wisdom as discernment and action over mere knowledge, echoing philosophical traditions that value practical, lived ethics.</p>
+    <ul>
+      <li><strong>Aristotle’s Nicomachean Ethics</strong>: Aristotle distinguishes between theoria (theoretical knowledge) and phronesis (practical wisdom), emphasizing that wisdom involves applying ethical understanding to real-world decisions for the common good. <em>This aligns with the principle of wisdom guiding governance and community life, transcending dogmatic knowledge.</em></li>
+      <li><strong>Confucius’ Analects</strong>: Confucian thought emphasizes ren (human-heartedness) and li (ethical action), advocating for communities built on mutual respect and moral cultivation. <em>Confucius’ focus on learning through reflection and mentorship parallels the Socratic-apprentice education model.</em></li>
+      <li><strong>Hannah Arendt’s The Human Condition</strong>: Arendt’s concept of vita activa (active life) prioritizes action and collective engagement over passive contemplation. <em>Her emphasis on creating shared public spaces mirrors the central village hub for dialogue and wisdom-sharing.</em></li>
+    </ul>
+    <h4>2. Ecological and Permaculture Models</h4>
+    <p>The vision of Edenic restoration through permaculture villages connects to modern ecological movements that integrate sustainability with community ethics.</p>
+    <ul>
+      <li><strong>Bill Mollison’s Permaculture: A Designer’s Manual</strong>: Mollison outlines principles for sustainable systems that mimic natural ecosystems, emphasizing closed-loop designs and community self-sufficiency. <em>His model of zoned layouts supports the concentric village design with a Tree of Wisdom courtyard.</em></li>
+      <li><strong>David Holmgren’s Permaculture Principles</strong>: Holmgren’s principles, such as “integrate rather than segregate,” echo the networked villages that balance human flourishing with ecological harmony. <em>His focus on community resilience supports the vision of interconnected, wisdom-centered societies.</em></li>
+      <li><strong>The Global Ecovillage Network (GEN)</strong>: GEN documents communities like Auroville and Findhorn that use circular designs and communal learning spaces. <em>Their focus on ecological restoration and ethical governance offers practical models for the roadmap’s prototype villages.</em></li>
+    </ul>
+    <h4>3. Community and Sociological Frameworks</h4>
+    <p>The manifesto calls for collective embodiment and action-oriented communities, resonating with sociological studies of intentional communities.</p>
+    <ul>
+      <li><strong>Robert Bellah’s Habits of the Heart</strong>: Bellah explores how communities rooted in shared values foster civic engagement and meaning. <em>His concept of “communities of memory and hope” parallels the vision of societies united by wisdom and service.</em></li>
+      <li><strong>The Transition Town Movement</strong>: This movement builds community resilience through local, sustainable initiatives. <em>Their model of participatory governance and education through action aligns with the wisdom councils and apprenticeship-based learning.</em></li>
+      <li><strong>Charles Fourier’s Utopian Communities</strong>: Fourier’s “phalanxes” proposed self-sustaining communities with shared labor and education. <em>His emphasis on harmonious cooperation supports the call for collective embodiment of ethical principles.</em></li>
+    </ul>
+    <h4>4. Technology and Ethical Integration</h4>
+    <p>The vision integrates AI and robotics to free humans for creative and spiritual work, guided by wisdom councils.</p>
+    <ul>
+      <li><strong>Kate Crawford’s Atlas of AI</strong>: Crawford examines how AI can be designed to serve human values, emphasizing governance to prevent exploitation. <em>Her call for participatory oversight aligns with the wisdom councils ensuring ethical technology use.</em></li>
+      <li><strong>Donella Meadows’ Thinking in Systems</strong>: Meadows’ systems thinking framework supports the networked villages and AI hubs. <em>Her principle of “leverage points” suggests small, ethical interventions can transform systems.</em></li>
+      <li><strong>The Fab City Initiative</strong>: This project envisions cities using AI for localized production, freeing residents for creative activities. <em>Their model of networked, self-sufficient urban hubs mirrors the AI-assisted cities supporting village ecosystems.</em></li>
+    </ul>
+    <h4>5. Education and Wisdom-Centered Learning</h4>
+    <p>The Socratic-apprentice model and emphasis on wisdom through experience find parallels in educational philosophies.</p>
+    <ul>
+      <li><strong>Paulo Freire’s Pedagogy of the Oppressed</strong>: Freire’s dialogic education model, where learning is co-created through reflection and action, mirrors the courtyard library’s Socratic dialogues. <em>His focus on empowering communities supports the vision of children contributing via apprenticeships.</em></li>
+      <li><strong>John Dewey’s Democracy and Education</strong>: Dewey advocates for experiential learning integrated with community life. <em>His view that education fosters democracy supports the wisdom councils.</em></li>
+      <li><strong>The Slow Education Movement</strong>: This movement emphasizes holistic learning through mentorship and real-world application. <em>It supports the rejection of rigid curricula for wisdom-driven growth.</em></li>
+    </ul>
+    <h4>6. Carl Jung</h4>
+    <p>Jung’s theories of the collective unconscious and archetypes resonate with the vision of the Body of Christ as a collective awakening.</p>
+    <ul>
+      <li><strong>Collective Unconscious and Archetypes</strong>: Jung’s notion of the collective unconscious as a shared reservoir aligns with the Spirit as the “inner guide.” <em>Archetypes like God, Christ, and Spirit mirror Jung’s Self and Wise Old Man, supporting communal reflection in the courtyard library.</em></li>
+      <li><strong>Individuation and Community</strong>: Jung’s individuation process, integrating personal and collective elements, parallels the collective embodiment of Christ. <em>It supports the educational model encouraging apprentices to explore their inner “Spirit” through dialogue.</em></li>
+    </ul>
+    <h4>7. Socrates</h4>
+    <p>Socrates’ method of inquiry emphasizes questioning assumptions to uncover truth, supporting the Socratic-apprentice education model.</p>
+    <ul>
+      <li><strong>Socratic Method</strong>: Socrates’ dialectical approach fosters discernment, ensuring actions align with collective good. <em>It supports the courtyard library as a hub for dialogue.</em></li>
+      <li><strong>Wisdom as Humility</strong>: Socrates’ claim, “I know that I know nothing,” echoes the call to humble the self before the infinite. <em>It supports wisdom over knowledge in governance and education.</em></li>
+    </ul>
+    <h4>8. Plato’s Republic</h4>
+    <p>Plato’s ideal society governed by philosopher-kings resonates with the wisdom councils and vision of a wisdom-centered society.</p>
+    <ul>
+      <li><strong>Philosopher-Kings and Wisdom Councils</strong>: Plato’s rulers trained in wisdom ensure justice, paralleling the wisdom councils. <em>It supports governance prioritizing discernment.</em></li>
+      <li><strong>Education for Virtue</strong>: Plato’s educational system supports the Socratic-apprentice model, fostering reason and ethics. <em>The allegory of the cave aligns with shifting from knowledge to wisdom.</em></li>
+    </ul>
+    <h4>9. Atlantis</h4>
+    <p>The myth of Atlantis offers inspiration and caution for the Edenic restoration.</p>
+    <ul>
+      <li><strong>Harmonious Design</strong>: Atlantis’ circular city with concentric rings mirrors the village layout with a Tree of Wisdom hub. <em>It inspires ecological harmony in design.</em></li>
+      <li><strong>Cautionary Tale</strong>: Atlantis’ collapse due to hubris warns against prioritizing technology over wisdom. <em>It reinforces the need for ethical governance.</em></li>
+    </ul>
+    <h4>10. Jean-Jacques Rousseau’s Social Contract</h4>
+    <p>Rousseau’s vision of a society prioritizing the general will supports the collective embodiment of Christ.</p>
+    <ul>
+      <li><strong>General Will</strong>: Rousseau’s concept supports communities acting in harmony for flourishing. <em>It aligns with collective embodiment and wisdom councils.</em></li>
+      <li><strong>Social Harmony</strong>: Rousseau’s focus on education and governance for virtue supports the Socratic-apprentice model and wisdom councils. <em>It fosters communal ethics.</em></li>
+    </ul>
+    <h4>11. Democracy</h4>
+    <p>Democracy’s emphasis on collective decision-making aligns with the wisdom councils and communal deliberation.</p>
+    <ul>
+      <li><strong>Participatory Governance</strong>: Democratic deliberation supports the courtyard library as a space for dialogue. <em>It ensures governance reflects collective wisdom.</em></li>
+      <li><strong>Community Empowerment</strong>: Democracy empowers citizens, supporting the apprenticeship model and shared purpose. <em>It aligns with inclusivity principles.</em></li>
+    </ul>
+    <h4>12. Socialism</h4>
+    <p>Socialism’s focus on collective ownership supports the networked villages and AI hubs.</p>
+    <ul>
+      <li><strong>Collective Resources</strong>: Shared resources align with AI hubs providing essentials. <em>It supports equitable distribution for communal flourishing.</em></li>
+      <li><strong>Community Solidarity</strong>: Socialism’s solidarity supports the Body acting as one, with shared spaces fostering interdependence. <em>It aligns with village design.</em></li>
+    </ul>
+    <h4>13. Arthur Schopenhauer</h4>
+    <p>Schopenhauer’s philosophy of the will and compassion resonates with transcending ego and fostering ethical action.</p>
+    <ul>
+      <li><strong>Will and Transcendence</strong>: Schopenhauer’s idea of denying the will through compassion aligns with humbling the self before God as the Beyond. <em>It supports selfless service in communities.</em></li>
+      <li><strong>Compassion and Contemplation</strong>: His focus on compassion and aesthetic contemplation supports the courtyard library’s role in cultivating wisdom. <em>It counters pessimism with action-oriented faith.</em></li>
+    </ul>
+    <h4>14. Friedrich Nietzsche</h4>
+    <p>Nietzsche’s call to transcend dogma and create values aligns with rejecting passive ritual for wisdom through action.</p>
+    <ul>
+      <li><strong>Overcoming Dogma</strong>: Nietzsche’s Übermensch supports transcending dogma for wisdom. <em>It aligns with collective embodiment as a communal self-overcoming.</em></li>
+      <li><strong>Will to Power</strong>: The will to power supports active faith and creative endeavors in villages. <em>It channels vitality into stewardship, tempered by wisdom councils.</em></li>
+    </ul>
+    <h4>15. Hegel’s Dialectic</h4>
+    <p>Hegel’s dialectic of projecting and integrating consciousness aligns with humanity’s millennia-long journey toward wisdom.</p>
+    <ul>
+      <li><strong>Projecting in the Vision</strong>: The vision projects spiritual aspirations onto villages and AI hubs, externalizing archetypes. <em>The Tree of Wisdom symbolizes unified consciousness.</em></li>
+      <li><strong>Integrating in the Vision</strong>: Socratic dialogues and wisdom councils reconcile contradictions, fostering higher awareness. <em>The roadmap’s stages reflect dialectical integration.</em></li>
+    </ul>
+  </div>
+  <div class="content" id="survey">
     <h2>Survey</h2>
     <p>We value your feedback on the Garden of Wisdom vision. Please rate your willingness on a scale of 1-10 (1 being highly unlikely, 10 being highly likely) and provide constructive feedback.</p>
     <form id="surveyForm">
@@ -835,7 +985,7 @@
     </form>
     <p id="surveyMessage"></p>
   </div>
-  <div class="non-home-content" id="contact">
+  <div class="content" id="contact">
     <h2>Contact</h2>
     <p>Interested in collaborating? Let us know!</p>
     <form id="contactForm">
