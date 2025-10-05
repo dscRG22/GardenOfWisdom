@@ -195,6 +195,12 @@
       color: var(--dark-color);
     }
 
+    .hamburger {
+      display: none;
+      cursor: pointer;
+      font-size: 1.5rem;
+    }
+
     /* Showcase */
     #showcase {
       color: #fff;
@@ -374,12 +380,61 @@
       font-size: 0.9em;
       color: #555;
     }
+
+    /* Mobile Responsiveness */
+    @media (max-width: 600px) {
+      #main-nav .container {
+        grid-template-columns: 1fr auto;
+      }
+
+      #main-nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        background: #fff;
+        width: 100%;
+        left: 0;
+        top: 100%;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      }
+
+      #main-nav ul.active {
+        display: flex;
+      }
+
+      #main-nav ul li a {
+        padding: 1rem;
+        border-bottom: 1px solid #eee;
+        text-align: center;
+      }
+
+      .hamburger {
+        display: block;
+        cursor: pointer;
+        font-size: 1.5rem;
+        justify-self: end;
+      }
+
+      #main-nav .logo {
+        max-height: 50px;
+        width: auto;
+      }
+
+      #main-footer .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      #main-footer .footer-container > *:last-child {
+        grid-column: 1 / span 2;
+      }
+    }
   </style>
 </head>
 <body>
   <nav id="main-nav">
     <div class="container">
       <img src="https://via.placeholder.com/150x50?text=Logo" alt="Garden of Wisdom" class="logo">
+      <div class="hamburger">☰</div>
       <ul>
         <li><a class="current" href="#home">Home</a></li>
         <li><a href="#vision">Vision</a></li>
@@ -603,54 +658,6 @@
       <li>Sustainably flourish: cultivate communities that are ecologically, socially, and spiritually regenerative.</li>
     </ul>
     <p>Humanity has spent millennia preparing for this moment — studying, reflecting, and refining wisdom. The time for passive contemplation is over. It is now the era of faith in action, of building, learning, and embodying the archetype of Christ to restore Eden and cultivate a sustainable, wise, and flourishing civilization.</p>
-  </div>
-  <div class="content" id="political-structure">
-    <h2>Political Structure</h2>
-    <h3>1. Overview</h3>
-    <ul>
-      <li><strong>Type</strong>: Direct participatory democracy.</li>
-      <li><strong>Core Principle</strong>: Wisdom-driven governance through debates in central zones, functioning as legislative bodies (House and Senate), with laws formalized by lawyers, upheld by judicial oversight, and executed by a democratically elected executive.</li>
-      <li><strong>Purpose</strong>: To enact laws and action plans reflecting collective wisdom, ethical action, and the vision’s archetypes (God as transcendence, Christ as ethical action, Spirit as discernment), scalable from villages to national levels.</li>
-      <li><strong>Electoral System</strong>: No electoral college; each village is its own electorate, and all citizens form the populist voting base.</li>
-    </ul>
-    <h3>2. Legislative Branch</h3>
-    <ul>
-      <li><strong>Structure</strong>: Debates in central zones (e.g., courtyard library with Tree of Wisdom) serve as the equivalent of House (community-level) and Senate (regional/national-level) deliberations.</li>
-      <li><strong>Community-Level Debates (House)</strong>:
-        <ul>
-          <li>Held in village central zones, open to all community members.</li>
-          <li>Proposals address local needs (e.g., sustainability, education).</li>
-          <li>Debates evaluate ideas based on wisdom, ethics, and communal benefit.</li>
-          <li>Community votes to select the best proposals for formalization.</li>
-        </ul>
-      </li>
-      <li><strong>Regional/National Debates (Senate)</strong>:
-        <ul>
-          <li>Best community proposals escalate to regional forums, debated by village representatives.</li>
-          <li>Significant regional proposals advance to national forums, debated by regional representatives.</li>
-          <li>All citizens vote on regional and national proposals, ensuring direct democratic input.</li>
-        </ul>
-      </li>
-      <li><strong>Lawyers’ Role</strong>:
-        <ul>
-          <li>Legislative lawyers formalize voted-upon debate ideas into draft laws or action plans.</li>
-          <li>Drafts are reviewed and voted on by the community/region/nation.</li>
-          <li>If unsatisfactory, drafts are rewritten until a majority agrees by vote.</li>
-        </ul>
-      </li>
-      <li><strong>Wisdom Councils</strong>: Facilitate debates, ensure ethical alignment, and oversee the process, acting as stewards of collective wisdom.</li>
-    </ul>
-    <h3>3. Judicial Branch</h3>
-    <ul>
-      <li><strong>Role</strong>: Exists to uphold laws, resolve disputes, and ensure alignment with the vision’s principles (wisdom, justice, stewardship).</li>
-      <li><strong>Function</strong>: Adjudicates conflicts arising from laws or action plans, maintaining fairness and ethical consistency across villages, regions, and the nation.</li>
-      <li><strong>Structure</strong>: Independent judiciary, likely appointed or elected, with judges trained in the vision’s ethical framework to interpret laws in light of wisdom and communal flourishing.</li>
-    </ul>
-    <h3>4. Executive Branch</h3>
-    <ul>
-      <li><strong>Structure</strong>: Elected through direct democratic vote by all citizens, with each village acting as its own electorate.</li>
-      <li><strong>Role</strong>: Implements laws and action plans approved through the legislative process, ensuring execution aligns with the vision’s goals of harmony and stewardship.</li>
-    </ul>
   </div>
   <div class="content" id="roadmap">
     <h2>Conceptual Map: Garden of Wisdom Society</h2>
@@ -1030,6 +1037,28 @@
     </div>
   </footer>
   <script>
+    // Toggle dropdown menu for mobile
+    document.querySelector('.hamburger').addEventListener('click', function() {
+      document.querySelector('#main-nav ul').classList.toggle('active');
+    });
+
+    // Manage content visibility
+    document.addEventLoaded('DOMContentLoaded', function() {
+      const contents = document.querySelectorAll('.content, #home');
+      contents.forEach(content => content.style.display = 'none');
+      const hash = location.hash || '#home';
+      const target = document.querySelector(hash);
+      if (target) target.style.display = 'block';
+    });
+
+    // Handle hash change
+    window.addEventListener('hashchange', function() {
+      const contents = document.querySelectorAll('.content, #home');
+      contents.forEach(content => content.style.display = 'none');
+      const target = document.querySelector(location.hash);
+      if (target) target.style.display = 'block';
+    });
+
     document.getElementById('contactForm').addEventListener('submit', function(e) {
       e.preventDefault();
       const name = e.target.querySelector('input[type="text"]').value;
