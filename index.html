@@ -38,6 +38,20 @@
     nav a:hover {
       text-decoration: underline;
     }
+    .grid-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        .grid-container div {
+            border: 1px solid black;
+            padding: 10px;
+        }
+        .grid-container a {
+            text-decoration: none;
+            color: inherit;
+        }
     .content {
       max-width: 800px;
       margin: 20px auto;
@@ -135,6 +149,32 @@
   <div class="content" id="home">
     <h2>Executive Summary</h2>
     <p>Our vision is to build communities where wisdom, ethical action, and service guide daily life. By embodying Christ’s teachings collectively, we aim to restore social and spiritual harmony, turning knowledge into practical wisdom that benefits all. The Garden of Wisdom seeks to renew humanity through sustainable, wisdom-centered societies, starting with permaculture villages on Earth and expanding to Mars and beyond. Guided by ethical AI, Socratic education, and a commitment to stewardship, we envision a galactic network of interconnected communities that transcend conflict and foster collective flourishing. Join us in rebuilding Eden, where humanity aligns with divine order, living as the Body of Christ through love, justice, and shared purpose.</p>
+     <div class="grid-container">
+            <div>
+                <a href="#vision">
+                    <h3>Vision</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.</p>
+                </a>
+            </div>
+            <div>
+                <a href="#manifesto">
+                    <h3>Manifesto</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.</p>
+                </a>
+            </div>
+            <div>
+                <a href="#political-structure">
+                    <h3>Political Structure</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.</p>
+                </a>
+            </div>
+            <div>
+                <a href="#roadmap">
+                    <h3>Roadmap</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.</p>
+                </a>
+            </div>
+        </div>
   </div>
   <div class="content" id="vision">
     <h2>Vision Statement</h2>
