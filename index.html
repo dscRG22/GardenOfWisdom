@@ -1043,7 +1043,7 @@
     });
 
     // Manage content visibility
-    document.addEventLoaded('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function() {
       const contents = document.querySelectorAll('.content, #home');
       contents.forEach(content => content.style.display = 'none');
       const hash = location.hash || '#home';
