@@ -10,6 +10,52 @@
             margin: 0;
             padding: 20px;
         }
+        /* Contact Form Styling */
+#contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px; /* Improved spacing between form elements */
+    padding: 20px;
+}
+
+#contact .form-row {
+    display: flex;
+    gap: 20px; /* Space between Name and Email fields */
+    width: 100%;
+    max-width: 600px; /* Ensures fields don’t stretch too wide */
+}
+
+#contact .form-row label {
+    flex: 1; /* Name and Email fields take equal width */
+}
+
+#contact input[type="text"],
+#contact input[type="email"],
+#contact textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#contact textarea {
+    max-width: 600px; /* Matches form-row width for consistency */
+}
+
+#contact button {
+    padding: 10px 20px;
+    background-color: #3b5998;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#contact button:hover {
+    background-color: #2a4373;
+}
+        
         header {
             text-align: center;
             margin-bottom: 20px;
@@ -83,6 +129,53 @@
         section.active {
             display: block;
         }
+        /* Survey Form Styling */
+#survey form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px; /* Consistent spacing between form elements */
+    padding: 20px;
+    max-width: 600px; /* Matches Contact form width */
+    margin: 0 auto; /* Ensures centering */
+}
+
+#survey p {
+    text-align: center; /* Center-aligns the question text */
+    margin: 10px 0;
+}
+
+#survey .radio-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centers radio buttons */
+    gap: 10px;
+}
+
+#survey .radio-group label {
+    margin: 0 5px; /* Spacing between radio buttons */
+}
+
+#survey textarea {
+    width: 100%;
+    max-width: 600px; /* Matches form width */
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#survey button {
+    padding: 10px 20px;
+    background-color: #3b5998;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#survey button:hover {
+    background-color: #2a4373;
+}
         .grid-container {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -919,10 +1012,11 @@
     </section>
 
     <section id="survey">
-        <h2>Survey</h2>
-        <p>We value your feedback on the Garden of Wisdom vision. Please rate your willingness on a scale of 1-10 (1 being highly unlikely, 10 being highly likely) and provide constructive feedback.</p>
-        <form>
-            <p><strong>Willingness to contribute money:</strong></p>
+    <h2>Survey</h2>
+    <p>We value your feedback on the Garden of Wisdom vision. Please rate your willingness on a scale of 1-10 (1 being highly unlikely, 10 being highly likely) and provide constructive feedback.</p>
+    <form>
+        <p><strong>Willingness to contribute money:</strong></p>
+        <div class="radio-group">
             <label><input type="radio" name="money" value="1"> 1</label>
             <label><input type="radio" name="money" value="2"> 2</label>
             <label><input type="radio" name="money" value="3"> 3</label>
@@ -933,9 +1027,11 @@
             <label><input type="radio" name="money" value="8"> 8</label>
             <label><input type="radio" name="money" value="9"> 9</label>
             <label><input type="radio" name="money" value="10"> 10</label>
-            <p>Highly Unlikely | Undecided | Highly Likely</p>
+        </div>
+        <p>Highly Unlikely | Undecided | Highly Likely</p>
 
-            <p><strong>Willingness to partake actively:</strong></p>
+        <p><strong>Willingness to partake actively:</strong></p>
+        <div class="radio-group">
             <label><input type="radio" name="partake" value="1"> 1</label>
             <label><input type="radio" name="partake" value="2"> 2</label>
             <label><input type="radio" name="partake" value="3"> 3</label>
@@ -946,9 +1042,11 @@
             <label><input type="radio" name="partake" value="8"> 8</label>
             <label><input type="radio" name="partake" value="9"> 9</label>
             <label><input type="radio" name="partake" value="10"> 10</label>
-            <p>Highly Unlikely | Undecided | Highly Likely</p>
+        </div>
+        <p>Highly Unlikely | Undecided | Highly Likely</p>
 
-            <p><strong>Willingness to passively support:</strong></p>
+        <p><strong>Willingness to passively support:</strong></p>
+        <div class="radio-group">
             <label><input type="radio" name="support" value="1"> 1</label>
             <label><input type="radio" name="support" value="2"> 2</label>
             <label><input type="radio" name="support" value="3"> 3</label>
@@ -959,9 +1057,11 @@
             <label><input type="radio" name="support" value="8"> 8</label>
             <label><input type="radio" name="support" value="9"> 9</label>
             <label><input type="radio" name="support" value="10"> 10</label>
-            <p>Highly Unlikely | Undecided | Highly Likely</p>
+        </div>
+        <p>Highly Unlikely | Undecided | Highly Likely</p>
 
-            <p><strong>Overall appreciation of this vision:</strong></p>
+        <p><strong>Overall appreciation of this vision:</strong></p>
+        <div class="radio-group">
             <label><input type="radio" name="appreciation" value="1"> 1</label>
             <label><input type="radio" name="appreciation" value="2"> 2</label>
             <label><input type="radio" name="appreciation" value="3"> 3</label>
@@ -972,14 +1072,15 @@
             <label><input type="radio" name="appreciation" value="8"> 8</label>
             <label><input type="radio" name="appreciation" value="9"> 9</label>
             <label><input type="radio" name="appreciation" value="10"> 10</label>
-            <p>Highly Unlikely | Undecided | Highly Likely</p>
+        </div>
+        <p>Highly Unlikely | Undecided | Highly Likely</p>
 
-            <p><strong>Constructive feedback:</strong></p>
-            <textarea rows="5" cols="50"></textarea>
-            <br>
-            <button type="submit">Submit Survey</button>
-        </form>
-    </section>
+        <p><strong>Constructive feedback:</strong></p>
+        <textarea rows="5" cols="50"></textarea>
+        <br>
+        <button type="submit">Submit Survey</button>
+    </form>
+</section>
 
     <section id="references">
         <h2>References</h2>
@@ -1127,16 +1228,18 @@
         </ul>
     </section>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Interested in collaborating? Let us know!</p>
-        <form>
-            <label>Name: <input type="text" name="name"></label><br>
-            <label>Email: <input type="email" name="email"></label><br>
-            <label>Message: <textarea rows="5" cols="50" name="message"></textarea></label><br>
-            <button type="submit">Send</button>
-        </form>
-    </section>
+<section id="contact">
+    <h2>Contact</h2>
+    <p>Interested in collaborating? Let us know!</p>
+    <form>
+        <div class="form-row">
+            <label>Name: <input type="text" name="name"></label>
+            <label>Email: <input type="email" name="email"></label>
+        </div>
+        <label>Message: <textarea rows="5" cols="50" name="message"></textarea></label>
+        <button type="submit">Send</button>
+    </form>
+</section>
 
     <footer>
         <p>&copy; 2025 Garden of Wisdom</p>
@@ -1146,7 +1249,7 @@
             <a href="#references" onclick="showSection('references')">References</a>
         </p>
         <form id="newsletter">
-            <label>Email: <input type="email" name="newsletter-email" placeholder="Enter email for newsletter"></label>
+            <label><input type="email" name="newsletter-email" placeholder="Enter email for newsletter"></label>
             <button type="submit">Subscribe</button>
         </form>
     </footer>
